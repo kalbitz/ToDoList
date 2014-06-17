@@ -8,6 +8,7 @@
 
 #import "TDLToDoListTableViewController.h"
 #import "TDLToDoItem.h"
+#import "TDLAddToDoItemViewController.h"
 
 @interface TDLToDoListTableViewController ()
 
@@ -143,7 +144,12 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *) segue
 {
-    
+    TDLAddToDoItemViewController *source = [segue sourceViewController];
+    TDLToDoItem *item = source.toDoItem;
+    if (item != nil) {
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Table view delegate
