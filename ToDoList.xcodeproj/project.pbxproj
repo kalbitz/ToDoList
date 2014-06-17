@@ -22,6 +22,7 @@
 		8EE5452A1940E865000C911B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE545291940E865000C911B /* Main.storyboard */; };
 		8EE5452D1949094A000C911B /* TDLAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5452C1949094A000C911B /* TDLAddToDoItemViewController.m */; };
 		8EF870AD194910ED00067DE3 /* TDLToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF870AC194910ED00067DE3 /* TDLToDoListTableViewController.m */; };
+		8EF870B01950B62500067DE3 /* TDLToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF870AF1950B62500067DE3 /* TDLToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8EE5452C1949094A000C911B /* TDLAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLAddToDoItemViewController.m; sourceTree = "<group>"; };
 		8EF870AB194910ED00067DE3 /* TDLToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLToDoListTableViewController.h; sourceTree = "<group>"; };
 		8EF870AC194910ED00067DE3 /* TDLToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLToDoListTableViewController.m; sourceTree = "<group>"; };
+		8EF870AE1950B62500067DE3 /* TDLToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLToDoItem.h; sourceTree = "<group>"; };
+		8EF870AF1950B62500067DE3 /* TDLToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				8EE545291940E865000C911B /* Main.storyboard */,
 				8EF870AB194910ED00067DE3 /* TDLToDoListTableViewController.h */,
 				8EF870AC194910ED00067DE3 /* TDLToDoListTableViewController.m */,
+				8EF870AE1950B62500067DE3 /* TDLToDoItem.h */,
+				8EF870AF1950B62500067DE3 /* TDLToDoItem.m */,
 				8EE5452B1949094A000C911B /* TDLAddToDoItemViewController.h */,
 				8EE5452C1949094A000C911B /* TDLAddToDoItemViewController.m */,
 				8EE5450C193EA6A1000C911B /* Images.xcassets */,
@@ -256,6 +261,7 @@
 				8EF870AD194910ED00067DE3 /* TDLToDoListTableViewController.m in Sources */,
 				8EE54507193EA6A1000C911B /* main.m in Sources */,
 				8EE5452D1949094A000C911B /* TDLAddToDoItemViewController.m in Sources */,
+				8EF870B01950B62500067DE3 /* TDLToDoItem.m in Sources */,
 				8EE5450B193EA6A1000C911B /* TDLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

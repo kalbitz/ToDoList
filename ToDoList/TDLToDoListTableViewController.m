@@ -7,8 +7,11 @@
 //
 
 #import "TDLToDoListTableViewController.h"
+#import "TDLToDoItem.h"
 
 @interface TDLToDoListTableViewController ()
+
+@property NSMutableArray *toDoItems;
 
 @end
 
@@ -27,11 +30,29 @@
 {
     [super viewDidLoad];
     
+    self.toDoItems = [[NSMutableArray alloc] init];
+    [self loadInitialData];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)loadInitialData {
+    // TODO: load data from permanent storage later; for now hard code some
+    TDLToDoItem *item1 = [[TDLToDoItem alloc] init];
+    item1.itemName = @"Buy milk";
+    [self.toDoItems addObject:item1];
+    
+    TDLToDoItem *item2 = [[TDLToDoItem alloc] init];
+    item2.itemName = @"Do laundry";
+    [self.toDoItems addObject:item2];
+    
+    TDLToDoItem *item3 = [[TDLToDoItem alloc] init];
+    item3.itemName = @"feed cat";
+    [self.toDoItems addObject:item3];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +65,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.toDoItems count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ListPrototypeCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    TDLToDoItem  *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = toDoItem.itemName;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
